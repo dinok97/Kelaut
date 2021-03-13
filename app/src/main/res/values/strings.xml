@@ -37,6 +37,10 @@
     <string name="account_name">Nama Akun</string>
     <string name="save">Simpan</string>
     <string name="cancel">Batal</string>
+    <string name="search_here">Mau mancing dimana?</string>
+    <string name="promotion">Promosi</string>
+    <string name="promotion_title">Judul Promosi</string>
+    <string name="promotion_desc">Teks Promosi</string>
 
     <!--
     This string is used for square devices and overridden by hello_world in
