@@ -5,10 +5,8 @@ interface Constant {
     interface Collection {
         companion object{
             val USER = "user"
+            val PROMOTION = "promotion"
             val TRANSACTION = "transaction"
-            val TRANSACTION_BUNDLE = "transactionBundle"
-            val ITEM = "item"
-            val BANNER_IMAGES = "bannerImages"
             val DATE_FORMAT = "dd/MM/yyyy"
         }
     }

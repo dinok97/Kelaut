@@ -1,17 +1,21 @@
 package com.kelaut.user
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
 import com.kelaut.user.adapter.PromotionAdapter
 import com.kelaut.user.model.Promotion
+import com.kelaut.user.utils.Constant.Collection.Companion.PROMOTION
 
 class HomeFragment : Fragment() {
 
+    private var promotionList: ArrayList<Promotion> = ArrayList()
     private lateinit var ctx: View
 
     override fun onCreateView(
@@ -21,43 +25,28 @@ class HomeFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
         ctx = view
 
-        fillCityToLayout()
+        showPromotionList()
 
         return view
     }
 
-    private fun fillCityToLayout() {
+    private fun showPromotionList() {
+        FirebaseFirestore.getInstance().collection(PROMOTION).get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    val promotion: Promotion = document.toObject(Promotion::class.java)
+                    promotion.promotionId = document.id
+                    promotionList.add(promotion)
+                }
+                fillPromotionToLayout()
+            }.addOnFailureListener { Log.e("FETCH-PROMOTION", it.message!!) }
+    }
+
+    private fun fillPromotionToLayout() {
         val recyclerView: RecyclerView = ctx.findViewById(R.id.rv_promotion)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        val promo1 = Promotion(
-            "1",
-            "Test Promotion1",
-            "Desc of promotion 1",
-            "https://lelogama.go-jek.com/post_featured_image/voucher-go-jek-gratis-banner.jpg"
-        )
-
-        val promo2 = Promotion(
-            "1",
-            "Test Promotion2",
-            "Desc of promotion 1",
-            "https://lelogama.go-jek.com/post_featured_image/voucher-go-jek-gratis-banner.jpg"
-        )
-
-        val promo3 = Promotion(
-            "1",
-            "Test Promotion3",
-            "Desc of promotion 1",
-            "https://lelogama.go-jek.com/post_featured_image/voucher-go-jek-gratis-banner.jpg"
-        )
-
-        val promotionList = ArrayList<Promotion>()
-        promotionList.add(promo1)
-        promotionList.add(promo2)
-        promotionList.add(promo3)
-
         val adapter = PromotionAdapter(context!!, promotionList)
         recyclerView.adapter = adapter
     }
