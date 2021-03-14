@@ -29,7 +29,7 @@
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/search_field"
+                android:id="@+id/cv_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -61,7 +61,7 @@
                 android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/search_field" />
+                app:layout_constraintTop_toBottomOf="@id/cv_search" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -84,14 +84,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_seasoning"
+                android:id="@+id/cv_news"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="10dp"
                 app:cardCornerRadius="25dp"
-                app:layout_constraintEnd_toStartOf="@+id/cv_vegetable_packet"
+                app:layout_constraintEnd_toStartOf="@+id/cv_checklist"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/cv_vegetable"
+                app:layout_constraintStart_toEndOf="@+id/cv_booking"
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <ImageView
@@ -104,12 +104,12 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_vegetable"
+                android:id="@+id/cv_booking"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="10dp"
                 app:cardCornerRadius="25dp"
-                app:layout_constraintEnd_toStartOf="@+id/cv_seasoning"
+                app:layout_constraintEnd_toStartOf="@+id/cv_news"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -124,14 +124,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_vegetable_packet"
+                android:id="@+id/cv_checklist"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="10dp"
                 app:cardCornerRadius="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/cv_seasoning"
+                app:layout_constraintStart_toEndOf="@+id/cv_news"
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <ImageView
@@ -154,7 +154,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/textView3"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cv_vegetable" />
+                app:layout_constraintTop_toBottomOf="@+id/cv_booking" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -167,7 +167,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/textView4"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/cv_seasoning" />
+                app:layout_constraintTop_toBottomOf="@+id/cv_news" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -180,7 +180,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
-                app:layout_constraintTop_toBottomOf="@+id/cv_vegetable_packet" />
+                app:layout_constraintTop_toBottomOf="@+id/cv_checklist" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -279,7 +279,7 @@
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/search_field" />
+            app:layout_constraintTop_toBottomOf="@id/cv_search" />
 
     </LinearLayout>
 
