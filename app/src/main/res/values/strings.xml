@@ -13,7 +13,7 @@
     <string name="repeat_password">Ulangi Kata Sandi</string>
     <string name="register">Daftar</string>
     <string name="return_to_login">Kembali ke Login</string>
-    <string name="front_desc">Selamat Datang di JastipinAja!\nTitip Menitip Lebih Mudah Bersama Kami</string>
+    <string name="front_desc">Lorem ipsum dolor sik amet</string>
     <string name="no_account">Belum punya akun? Daftar di sini</string>
     <string name="already_have_account">Sudah punya akun? Login disini</string>
     <string name="lets_start">Yuk Mulai!</string>
@@ -37,6 +37,7 @@
     <string name="account_name">Nama Akun</string>
     <string name="save">Simpan</string>
     <string name="cancel">Batal</string>
+    <string name="ok">Oke</string>
     <string name="search_here">Mau mancing dimana?</string>
     <string name="promotion">Promosi</string>
     <string name="promotion_title">Judul Promosi</string>
@@ -46,6 +47,27 @@
     <string name="news">Berita</string>
     <string name="checklist">Kelengkapan melaut</string>
     <string name="give_rating">Beri Penilaian</string>
+    <string name="rates">Penilaian</string>
+
+    <string name="decided_date">Tentukan Tanggal</string>
+    <string name="service_image">Gambar Jasa</string>
+    <string name="book_service">Pesan Jasa</string>
+    <string name="search">Cari</string>
+    <string name="service_name">Nama Jasa</string>
+    <string name="location">Lokasi</string>
+    <string name="service_owner">Pemilik</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="default_count">1</string>
+
+    <string name="days">Berapa Hari?</string>
+    <string name="desc">Deskripsi</string>
+    <string name="additional_service">Layanan Tambahan</string>
+    <string name="price">Harga</string>
+    <string name="price_desc">Keterangan Harga</string>
+    <string name="message_to_owner">Pesan untuk Penyedia Jasa</string>
+
 
     <!--
     This string is used for square devices and overridden by hello_world in
