@@ -67,6 +67,7 @@
     <string name="price">Harga</string>
     <string name="price_desc">Keterangan Harga</string>
     <string name="message_to_owner">Pesan untuk Penyedia Jasa</string>
+    <string name="schedule">Jadwal Operasional</string>
 
 
     <!--

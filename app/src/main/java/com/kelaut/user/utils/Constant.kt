@@ -6,16 +6,17 @@ interface Constant {
         companion object{
             val USER = "user"
             val PROMOTION = "promotion"
+            val SERVICE = "service"
             val TRANSACTION = "transaction"
             val DATE_FORMAT = "dd/MM/yyyy"
         }
     }
 
-    interface Field {
+    interface Progress {
         companion object {
-            val IS_AVAILABLE = "available"
-            val DATE = "date"
-            val USER_ID = "userId"
+            val SUBMITED = "submited"
+            val APPROVED = "approved"
+            val DONE = "done"
         }
     }
 

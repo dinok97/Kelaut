@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_item_service"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_service_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_service_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/banner"
+            android:contentDescription="@string/service_image"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:text="@string/service_name"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintStart_toEndOf="@+id/cv_service_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:maxLines="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:text="@string/location"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintStart_toEndOf="@+id/iv_location"
+        app:layout_constraintTop_toBottomOf="@+id/tv_service_name" />
+
+    <TextView
+        android:id="@+id/tv_service_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:text="@string/service_owner"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintStart_toEndOf="@+id/iv_service_owner"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+    <TextView
+        android:id="@+id/tv_service_rates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:text="@string/rates"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintStart_toEndOf="@+id/iv_rates"
+        app:layout_constraintTop_toBottomOf="@+id/tv_service_owner" />
+
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintTop_toBottomOf="@id/tv_service_name"
+        app:layout_constraintStart_toEndOf="@id/cv_service_image"
+        android:src="@drawable/ic_baseline_location_on_24"/>
+
+    <ImageView
+        android:id="@+id/iv_service_owner"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/back"
+        app:layout_constraintTop_toBottomOf="@id/tv_location"
+        app:layout_constraintStart_toEndOf="@id/cv_service_image"
+        android:src="@drawable/ic_baseline_person_24"/>
+
+    <ImageView
+        android:id="@+id/iv_rates"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/back"
+        app:tint="@color/primary"
+        app:layout_constraintTop_toBottomOf="@id/tv_service_owner"
+        app:layout_constraintStart_toEndOf="@id/cv_service_image"
+        android:src="@drawable/ic_baseline_star_24"/>
+
+    <ImageView
+        android:id="@+id/kelaut_logo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/skip"
+        android:src="@drawable/kelaut_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
