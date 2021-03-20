@@ -73,6 +73,10 @@ class SearchActivity : AppCompatActivity() {
             loadServicesData()
         }
 
+        iv_back.setOnClickListener {
+            finish()
+        }
+
     }
 
     private fun loadServicesData() {

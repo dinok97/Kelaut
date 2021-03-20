@@ -111,6 +111,10 @@ class BookingActivity : AppCompatActivity() {
                 .show()
         }
 
+        iv_back.setOnClickListener {
+            finish()
+        }
+
     }
 
     private fun initServiceData(){

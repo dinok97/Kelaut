@@ -25,10 +25,12 @@ import java.io.IOException
 @Suppress("DEPRECATION")
 class EditProfileActivity : AppCompatActivity() {
 
-    private val CHOOSE_IMAGE = 101
-    private val IMAGE_STORAGE_DIR = "userProfilePictures/"
-    private var oldProfileImageUrl = "default profile image url"
-    private var profileImageUrl = "default profile image url"
+    companion object {
+        private const val CHOOSE_IMAGE = 101
+        private const val IMAGE_STORAGE_DIR = "userProfilePictures/"
+        private var oldProfileImageUrl = "default profile image url"
+        private var profileImageUrl = "default profile image url"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +56,7 @@ class EditProfileActivity : AppCompatActivity() {
                 Log.d("USER-DATA", "fail to catch user data")
             }
         }.addOnFailureListener {
-            TODO("if something goes wrong, do something here")
+            Toast.makeText(this, "Error fetch User data from Firebase", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -108,7 +110,7 @@ class EditProfileActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 progress_bar.visibility = View.GONE
                 Toast.makeText(this, "Data Berhasil Diperbarui", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, HomeActivity::class.java))
+                finish()
             }.addOnFailureListener {
                 Toast.makeText(this, "Pastikan Anda Terkoneksi dengan Internet", Toast.LENGTH_SHORT).show()
             }
