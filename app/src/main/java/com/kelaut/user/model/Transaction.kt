@@ -5,7 +5,7 @@ import com.kelaut.user.utils.Constant.Progress.Companion.SUBMITED
 import java.util.*
 
 data class Transaction (
-    @get:Exclude val transactionId: String = "",
+    @get:Exclude var transactionId: String = "",
     val userName: String = "",
     val userEmail: String = "",
     val userPhoneNumber: String = "",
