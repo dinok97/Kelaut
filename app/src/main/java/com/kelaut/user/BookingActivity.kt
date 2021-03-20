@@ -25,9 +25,9 @@ import java.util.*
 class BookingActivity : AppCompatActivity() {
 
     companion object {
-        val SERVICE_ID = "serviceId"
-        val PERSON_COUNT = "personCount"
-        val USE_AT = "useAt"
+        const val SERVICE_ID = "serviceId"
+        const val PERSON_COUNT = "personCount"
+        const val USE_AT = "useAt"
     }
 
     private lateinit var serviceId: String
@@ -50,7 +50,6 @@ class BookingActivity : AppCompatActivity() {
 
     private fun init (){
         initObject()
-//        initUI()
         initEventUI()
     }
 
@@ -153,7 +152,6 @@ class BookingActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 progress_bar.visibility = View.GONE
                 Toast.makeText(this, "success save transaction", Toast.LENGTH_SHORT).show()
-//                startActivity(Intent(this, HomeActivity::class.java))
             }.addOnFailureListener {
                 progress_bar.visibility = View.GONE
             }
@@ -162,16 +160,14 @@ class BookingActivity : AppCompatActivity() {
     private fun generateTransaction(): Transaction{
         return Transaction(
             "tranId",
-            user.userName,
-            user.email,
-            user.phoneNumber,
-            service.fishermanName,
-            service.phoneNumber,
+            userId,
+            "service.fishermanId",
+            serviceId,
             service.name,
             service.price,
             service.priceDescription,
             service.imageURL,
-            service.location.detail,
+            service.location,
             useAt,
             0,
             et_message_to_owner.text.toString(),

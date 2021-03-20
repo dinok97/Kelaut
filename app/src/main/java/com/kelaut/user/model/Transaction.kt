@@ -6,18 +6,16 @@ import java.util.*
 
 data class Transaction (
     @get:Exclude var transactionId: String = "",
-    val userName: String = "",
-    val userEmail: String = "",
-    val userPhoneNumber: String = "",
+    val userId: String = "",
 
-    val fishermanName: String = "",
-    val fishermanPhoneNumber: String = "",
+    val fishermanId: String = "",
 
+    val serviceId: String = "",
     val serviceName: String = "",
     val servicePrice: Int = 0,
     val servicePriceDesc: String = "",
     val serviceImageUrl: String = "",
-    val serviceLocation: String = "",
+    val serviceLocation: Location = Location(),
 
     val useAt: Date = Calendar.getInstance().time,
     val personCount: Int = 0,

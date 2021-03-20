@@ -22,7 +22,7 @@ class TransactionFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private val SEDANG_DIPROSES = "Sedang Diproses"
     private val RIWAYAT = "Riwayat"
-    private val USER_EMAIL = "userEmail"
+    private val USER_ID = "userId"
 
     private lateinit var progressBar: ProgressBar
     private lateinit var tvNoTransaction: TextView
@@ -51,8 +51,8 @@ class TransactionFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private fun initObject(view: View){
 
         val mUser = FirebaseAuth.getInstance().currentUser
-        val userEmail = mUser?.email
-        getTransactionBundleData(userEmail)
+        val userId = mUser?.uid
+        getTransactionBundleData(userId)
 
         val spinner = view.findViewById<Spinner>(R.id.spinner_transaction_progress)
         val arrayAdapter = ArrayAdapter.createFromResource(
@@ -82,9 +82,9 @@ class TransactionFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     }
 
-    private fun getTransactionBundleData(userEmail: String?) {
+    private fun getTransactionBundleData(userId: String?) {
         val db = FirebaseFirestore.getInstance()
-        db.collection(TRANSACTION).whereEqualTo(USER_EMAIL, userEmail).get()
+        db.collection(TRANSACTION).whereEqualTo(USER_ID, userId).get()
             .addOnSuccessListener { documents ->
                 Log.d("DOCUMENTS", transactionList.toString())
                 for (document in documents) {
