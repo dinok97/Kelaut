@@ -44,7 +44,7 @@ class ServiceAdapter(
 
         holder.tvServiceName.text = serviceList[position].name
         holder.tvLocation.text = serviceList[position].location.detail
-        holder.tvOwner.text = serviceList[position].owner
+        holder.tvOwner.text = serviceList[position].fishermanName
         holder.tvRates.text = serviceList[position].rating.toString()
         Glide.with(context).load(serviceList[position].imageURL).into(holder.ivService)
         holder.cvService.setOnClickListener(onClickListener(position))

@@ -65,7 +65,7 @@ class BookingActivity : AppCompatActivity() {
     private fun initUI() {
         tv_service_name.text = service.name
         tv_rates.text = service.rating.toString()
-        tv_service_owner.text = service.owner
+        tv_service_owner.text = service.fishermanName
         tv_phone_number.text = service.phoneNumber
         tv_location.text = service.location.detail
         tv_desc.text = service.description
@@ -165,7 +165,7 @@ class BookingActivity : AppCompatActivity() {
             user.userName,
             user.email,
             user.phoneNumber,
-            service.owner,
+            service.fishermanName,
             service.phoneNumber,
             service.name,
             service.price,

@@ -5,7 +5,8 @@ import java.util.*
 
 data class Service(
     @get:Exclude var Id: String = "",
-    val owner: String = "",
+    val fishermanId: String = "",
+    val fishermanName: String = "",
     val name: String = "",
     val type: String = "",
     val description: String = "",
