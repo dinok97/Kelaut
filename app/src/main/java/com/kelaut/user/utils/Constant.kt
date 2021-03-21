@@ -8,7 +8,7 @@ interface Constant {
             val PROMOTION = "promotion"
             val SERVICE = "service"
             val TRANSACTION = "transaction"
-            val DATE_FORMAT = "dd/MM/yyyy"
+            val NEWS = "news"
         }
     }
 

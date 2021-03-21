@@ -33,10 +33,10 @@ class HomeFragment : Fragment() {
             startActivity(Intent(context, SearchActivity::class.java))
         }
         view.cv_booking.setOnClickListener {
-            Toast.makeText(context, "booking clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(context, BookingActivity::class.java))
         }
         view.cv_news.setOnClickListener {
-            Toast.makeText(context, "news clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(context, NewsActivity::class.java))
         }
         view.cv_checklist.setOnClickListener {
             Toast.makeText(context, "checklist clicked", Toast.LENGTH_SHORT).show()
