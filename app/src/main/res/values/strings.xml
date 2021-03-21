@@ -73,6 +73,8 @@
     <string name="default_price">Rp 10000</string>
     <string name="no_transaction">Tidak ada transaksi</string>
 
+    <string name="text">Text</string>
+
     <string-array name="transaction_progress">
         <item>Sedang Diproses</item>
         <item>Riwayat</item>
