@@ -240,7 +240,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/roboto_bold"
-                        android:text="@string/promotion_title"
+                        android:text="Raja Laut - Pulau Seribu"
                         android:textSize="18sp" />
 
                     <TextView
@@ -250,7 +250,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="@string/promotion_desc"
+                        android:text="28 Feb 2021"
                         android:textSize="14sp" />
 
                     <RatingBar
@@ -267,19 +267,19 @@
 
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/tv_favorite"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="@string/give_rating"
-                android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+<!--            <TextView-->
+<!--                android:id="@+id/tv_favorite"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:fontFamily="@font/roboto_bold"-->
+<!--                android:text="@string/give_rating"-->
+<!--                android:textSize="17sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_favorite_place"

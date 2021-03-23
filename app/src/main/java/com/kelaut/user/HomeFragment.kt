@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
@@ -39,7 +38,7 @@ class HomeFragment : Fragment() {
             startActivity(Intent(context, NewsActivity::class.java))
         }
         view.cv_checklist.setOnClickListener {
-            Toast.makeText(context, "checklist clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(context, CheckListActivity::class.java))
         }
 
         showPromotionList()

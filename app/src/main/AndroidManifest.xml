@@ -15,7 +15,8 @@
         android:roundIcon="@drawable/kelaut_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kelaut">
-        <activity android:name=".NewsActivity"/>
+        <activity android:name=".CheckListActivity"/>
+        <activity android:name=".NewsActivity" />
         <activity android:name=".BookingActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".HomeActivity" />

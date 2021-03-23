@@ -9,6 +9,7 @@ interface Constant {
             val SERVICE = "service"
             val TRANSACTION = "transaction"
             val NEWS = "news"
+            val CHECKLIST = "checklist-user"
         }
     }
 
