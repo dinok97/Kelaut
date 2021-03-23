@@ -1,15 +1,16 @@
 package com.kelaut.user.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.kelaut.user.NewsDetailActivity
 import com.kelaut.user.R
 import com.kelaut.user.model.News
 import com.kelaut.user.utils.DateUtils
@@ -49,7 +50,10 @@ class NewsAdapter(
     /*this method must refactor to view task*/
     private fun onClickListener(position: Int): View.OnClickListener {
         return View.OnClickListener {
-            Toast.makeText(context, newsList[position].title, Toast.LENGTH_SHORT).show()
+            context.startActivity(
+                Intent(context, NewsDetailActivity::class.java)
+                    .putExtra(NewsDetailActivity.URL, newsList[position].contentUrl)
+            )
         }
     }
 
